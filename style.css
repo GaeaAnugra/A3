@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    background-color: beige;
+}
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    /*position: absolute; to overlapp with other papers */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid beige;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+/* Paper Flip effect*/
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+    /* I added the transition to animate the button moving to the left smoothly and not have it moved instantaniously */
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Artworks */
+/* The artworks I have chosen are all drawn by me. They represent my most favorite artworks, and each piece is a reflection of my interests. For example, the Qantas artwork represents my love for aviation. The Ming art represents my interest in history. The woman on the third page is a member of my favorite K-pop group and thus represents my love for K-pop. Finally, the last page represents my favorite era in history, which is the Sengoku Jidai period in Japanese history.*/
+
+.QF-img {
+    width: 345px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.Ming-img {
+    width: 345px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.Kpop-img {
+    width: 345px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.Daimyo-img {
+    width: 345px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}

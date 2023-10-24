@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gaea A3</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./main.js"defer></script>
+        <script src="https://kit.fontawesome.com/d9b9798058.js" crossorigin="anonymous"></script>
+        <!--I used a website called font awesome for the button icon because of their extensive library of icons-->
+    </head>
+    <body>
+        <!-- Previous Button -->
+        <!-- Originally, I wanted to add clippings in the edge of the paper. However, I opted instead to add buttons to indicate to the user to go to the next or previous pages. This is primarily for accessibility purposes-->
+        <!-- Affordance - I want to add a button to go to the next page and the previous page -->
+        <!-- Signifier - I want the button to be on both sides the book and when hovering, it changes saturation slightly -->
+        <!-- Feedback - I want the page to turn according to the direction of the button-->
+        <button id="prev-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <!-- Book -->
+        <div id="book" class="book">
+            <!-- Paper 1-->
+            <div id="p1" class="paper">
+                <div class="front">
+                   <div id="f1" class="front-content">
+                    <h1>Gaea Art Portfolio</h1>
+                   </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <img class="QF-img" src="QF.png" alt="Qantas Art">
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2-->
+            <div id="p2" class="paper">
+                <div class="front">
+                   <div id="f2" class="front-content">
+                    <img class="Ming-img" src="Ming.png" alt="Ming Dynasty Art">
+                   </div>
+                </div>
+                <div class="back">
+                   <div id="b2" class="back-content">
+                        <img class="Kpop-img" src="Kpop.png" alt="New-Jeans Kpop Art">
+                     </div>
+                </div>
+            </div>
+            <!-- Paper 3-->
+            <div id="p3" class="paper">
+                <div class="front">
+                   <div id="f3" class="front-content">
+                    <img class="Daimyo-img" src="Daimyo.png" alt="Daimyo Art">
+                   </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>Thank you</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <!-- Reference to Visual Planning -->
+        <!-- Originally I had two initial features I wanted to add. Firstly, it was the previously stated button and how I initally wanted to a clip in the bottom corners of the page to indicate the button to the next or previous pages. Another feature was descriptions of each of the artworks. However, it was unnecessary and instead I opted to make it just a gallery of all my favorite art. Lastly, I opted to have four artworks instead of three as I actually had real estate to do so (I didnt realise I had another page). -->
+
+    </body>
+
+</html>
